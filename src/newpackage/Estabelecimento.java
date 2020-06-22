@@ -3,16 +3,21 @@ package newpackage;
 
 import java.util.ArrayList;
 
-public abstract class Estabelecimento {
+public abstract class Estabelecimento implements AddCard {
     //Atributos
     private String nome;
     private ArrayList<Cardapio> lista = new ArrayList<Cardapio>();
     
     //Metodos
-    
-    protected void addCardapio(Cardapio cardapio){
+
+    @Override
+    public void addCardapio(Cardapio cardapio) {
         lista.add(cardapio);
     }
+
+   
+    
+   
 
     public String getNome() {
         return nome;
